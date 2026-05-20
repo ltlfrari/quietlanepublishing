@@ -141,16 +141,8 @@ nav {
 }
 
 /* LATEST RELEASES */
-.releases-section-break {
-  border: none; /* Removes the default browser border */
-  height: 3px; /* Sets the thickness */
-  background-color: #3498db; /* Sets the color */
-  width: 50%; /* Sets the width */
-  margin: 20px auto; /* Centers the line with margins */	
-}	
-
 .releases-section {
-    background-color: #f5f0e8;
+    background-color: #fff;
     padding: 60px 48px;
     text-align: center;
 }
