@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #f5f0e8;
+    color: #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* NAV */
+nav {
+    background-color: #f5f0e8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 48px;
+    border-bottom: 1px solid #ddd8cc;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.nav-logo img {
+    height: 64px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2a2a2a;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    border-bottom-color: #2a3d2a;
+    color: #2a3d2a;
+}
+
+/* HERO */
+.hero {
+    width: 100%;
+    max-height: 560px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    background-color: #f5f0e8;
+    padding: 72px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.about-divider {
+    width: 40px;
+    height: 2px;
+    background-color: #2a3d2a;
+    margin: 12px 0 20px 0;
+}
+
+.about-text p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #444;
+    max-width: 340px;
+    margin-bottom: 20px;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 1px solid #2a2a2a;
+    text-decoration: none;
+    color: #2a2a2a;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.learn-more-btn:hover {
+    background-color: #2a3d2a;
+    color: #fff;
+    border-color: #2a3d2a;
+}
+
+.about-logo {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.about-logo img {
+    width: 260px;
+    height: auto;
+}
+
+/* LATEST RELEASES */
+.releases-section {
+    background-color: #f5f0e8;
+    padding: 60px 48px;
+    text-align: center;
+}
+
+.releases-section h2 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.releases-divider {
+    width: 40px;
+    height: 2px;
+    background-color: #2a3d2a;
+    margin: 12px auto 40px auto;
+}
+
+.book-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.book-item {
+    width: 200px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s;
+}
+
+.book-item:hover {
+    transform: translateY(-4px);
+}
+
+.book-item img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    display: block;
+}
+
+.book-item .book-title {
+    margin-top: 14px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.book-item .book-subtitle {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    color: #777;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+/* NEWSLETTER */
+.newsletter-section {
+    background-color: #2a3d2a;
+    padding: 56px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.newsletter-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.newsletter-icon {
+    width: 52px;
+    height: 52px;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.newsletter-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+}
+
+.newsletter-text h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+.newsletter-text p {
+    color: rgba(255,255,255,0.7);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 12px 20px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    width: 280px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.newsletter-form button {
+    padding: 12px 24px;
+    background-color: #f5f0e8;
+    color: #2a3d2a;
+    border: none;
+    font-size: 14px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.newsletter-form button:hover {
+    background-color: #e0d8c8;
+}
+
+/* FOOTER */
+footer {
+    background-color: #2a3d2a;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+footer p {
+    color: rgba(255,255,255,0.6);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+}
+
+.footer-right {
+    color: rgba(255,255,255,0.6);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.footer-social a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+/* COMING SOON PAGES */
+.coming-soon-wrapper {
+    min-height: calc(100vh - 97px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f0e8;
+}
+
+.coming-soon-box {
+    text-align: center;
+    padding: 48px;
+}
+
+.coming-soon-box h1 {
+    font-size: 48px;
+    font-weight: normal;
+    color: #2a3d2a;
+    margin-bottom: 16px;
+}
+
+.coming-soon-box p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    color: #777;
+}
+
+.coming-soon-box .back-link {
+    display: inline-block;
+    margin-top: 28px;
+    text-decoration: none;
+    color: #2a3d2a;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    border-bottom: 1px solid #2a3d2a;
+    padding-bottom: 2px;
+}
+
+.coming-soon-box .back-link:hover {
+    opacity: 0.7;
+}
+
+/* ABOUT BIO PAGE */
+.about-bio-box {
+    text-align: left;
+    padding: 64px 48px;
+    max-width: 720px;
+    width: 100%;
+}
+
+.about-bio-box h1 {
+    font-size: 42px;
+    font-weight: normal;
+    color: #2a3d2a;
+    margin-bottom: 12px;
+}
+
+.about-bio-box .about-divider {
+    width: 40px;
+    height: 2px;
+    background-color: #2a3d2a;
+    margin: 0 0 28px 0;
+}
+
+.about-bio-box p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.85;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Book detail page */
+.book-detail {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 2rem 2rem 0 4rem;
+}
+
+.book-detail-cover {
+    flex: 0 0 auto;
+    width: 300px;
+}
+
+.book-detail-cover img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 4px 6px 20px rgba(0,0,0,0.25);
+}
+
+.book-detail-info {
+    flex: 1;
+}
+
+.book-detail-info .back-text {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #3a3228;
+}
+
+.book-detail-info .coming-soon {
+    margin-top: 2rem;
+    font-family: Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #5a3e2b;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 680px) {
+    .book-detail {
+        flex-direction: column;
+    }
+    .book-detail-cover {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+/* Section rule above releases */
+.section-rule {
+    width: 50%;
+    margin: 0 auto;
+    border-top: 1px solid #2a3d2a;
+    border-bottom: 1px solid #2a3d2a;
+    height: 3px;
+    background-color: transparent;
+}
