@@ -56,29 +56,22 @@
                 <p>Get updates on new releases, news,<br>and behind-the-scenes thoughts.</p>
             </div>
         </div>
-        <form class="newsletter-form" id="kit-form">
-            <input type="email" id="kit-email" name="email_address" placeholder="Your email address" required>
+        <iframe name="kit-hidden" style="display:none;"></iframe>
+        <form class="newsletter-form" id="kit-form" action="https://app.convertkit.com/forms/9496917/subscriptions" method="post" target="kit-hidden">
+            <input type="email" name="email_address" placeholder="Your email address" required>
             <button type="submit">Subscribe</button>
         </form>
-        <p class="newsletter-thankyou" id="kit-thankyou" style="display:none;">Thank you for subscribing!</p>
+        <div class="newsletter-thankyou" id="kit-thankyou" style="display:none;">
+            <p class="newsletter-thankyou-main">Thank you for subscribing!</p>
+            <p class="newsletter-thankyou-sub">Check your email or junk mail folder for a confirmation email.</p>
+        </div>
 
         <script>
-        document.getElementById('kit-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            var email = document.getElementById('kit-email').value;
-            var data = new FormData();
-            data.append('email_address', email);
-            fetch('https://app.convertkit.com/forms/9496917/subscriptions', {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            }).then(function() {
+        document.getElementById('kit-form').addEventListener('submit', function() {
+            setTimeout(function() {
                 document.getElementById('kit-form').style.display = 'none';
                 document.getElementById('kit-thankyou').style.display = 'block';
-            }).catch(function() {
-                document.getElementById('kit-form').style.display = 'none';
-                document.getElementById('kit-thankyou').style.display = 'block';
-            });
+            }, 800);
         });
         </script>
     </section>
