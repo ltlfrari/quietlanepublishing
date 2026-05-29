@@ -56,9 +56,8 @@
                 <p>Get updates on new releases, news,<br>and behind-the-scenes thoughts.</p>
             </div>
         </div>
-        <iframe name="kit-hidden" style="display:none;"></iframe>
-        <form class="newsletter-form" id="kit-form" action="https://app.convertkit.com/forms/9496917/subscriptions" method="post" target="kit-hidden">
-            <input type="email" name="email_address" placeholder="Your email address" required>
+        <form class="newsletter-form" id="kit-form" action="https://app.convertkit.com/forms/9496917/subscriptions" method="post" target="_blank">
+            <input type="email" id="kit-email" name="email_address" placeholder="Your email address" required>
             <button type="submit">Subscribe</button>
         </form>
         <div class="newsletter-thankyou" id="kit-thankyou" style="display:none;">
@@ -69,9 +68,10 @@
         <script>
         document.getElementById('kit-form').addEventListener('submit', function() {
             setTimeout(function() {
+                document.getElementById('kit-email').value = '';
                 document.getElementById('kit-form').style.display = 'none';
                 document.getElementById('kit-thankyou').style.display = 'block';
-            }, 800);
+            }, 300);
         });
         </script>
     </section>
