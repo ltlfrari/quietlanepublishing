@@ -6,11 +6,13 @@
         // { label: 'Books',   href: base + 'books/' },
         { label: 'About',   href: base + 'about/' },
         // { label: 'News',    href: base + 'news/' },
-        { label: 'Contact', href: base + 'contact/' }
+        { label: 'Contact', href: base + 'contact/', hidden: true }
     ];
 
     function buildNavHTML() {
-        const navItems = links.map(function (link) {
+        const navItems = links.filter(function (link) {
+            return !link.hidden;
+        }).map(function (link) {
             const active = window.location.href.indexOf(link.href) !== -1 ? ' class="active"' : '';
             return '<li><a href="' + link.href + '"' + active + '>' + link.label + '</a></li>';
         }).join('');
