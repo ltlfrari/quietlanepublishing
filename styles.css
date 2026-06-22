@@ -194,6 +194,10 @@ nav {
     display: block;
 }
 
+.book-item.square-book-item img {
+    height: 200px;
+}
+
 .book-item .book-title {
     margin-top: 14px;
     font-size: 15px;
