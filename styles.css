@@ -195,7 +195,12 @@ nav {
 }
 
 .book-item.square-book-item img {
+    width: 200px;
     height: 200px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #efe2a8;
+    margin: 0 auto;
 }
 
 .book-item .book-title {
